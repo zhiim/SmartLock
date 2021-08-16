@@ -86,11 +86,11 @@ Page({
       },
       success: function(res){
         const result = unescape(res.data);  // url解码
-        console.log(result);
+        console.log('otpauth url: ' + result);
 
         app.globalData.accountToAdd = utils.getParametersFromResult(result)  // 将扫码得到的信息解析后, 存在全局变量accountToAdd中, 全局变量定义与app.js
 
-          console.log('account to add', app.globalData.accountToAdd);
+          console.log('account to add: ' + app.globalData.accountToAdd);
 
           wx.navigateTo({
             // 添加前的信息编辑界面

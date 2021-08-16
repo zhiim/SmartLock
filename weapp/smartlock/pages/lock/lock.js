@@ -1,6 +1,7 @@
 const utils = require('../../utils/util')
 const app = getApp()
 import drawQrcode from '../../utils/weapp.qrcode'
+import base32 from '../../utils/base32'
 
 let recentUpdated = false
 
@@ -9,6 +10,7 @@ Page({
   data: {
     show: false,  //控制二维码是否显示
     qrtext: '',  //二维码表示的字符串
+    PWD: '',
     codes: [],
     accounts: [],
     secondsLeft: 30,
@@ -20,29 +22,16 @@ Page({
     this.setData({
       show: true
     })
-    console.log(this.data.show)
-  },
-
-  // 关闭二维码界面
-  onClose:function(){
+    console.log('codes: '+this.data.codes)
+    console.log('PWD: '+this.data.PWD)
+    var qrcode = this.data.codes + this.data.PWD
+    console.log('qrcode:' + qrcode)
+    qrcode = base32.encode(qrcode)
+    console.log('qrcode after encode: ' + qrcode)
     this.setData({
-      show: false
+      qrtext: qrcode
     })
-    console.log(this.data.show)
-  },
-
-  onTaptoHelp:function(){
-    wx.navigateTo({
-      url: '/pages/help/help',
-    })
-  },
-
-  onLoad: function (options) {
-    this.setData({
-      qrtext: 'test'
-    })
-    console.log(this.data.qrtext)
-    // 绘制二维码
+    console.log('qrtext was setted to: ' + this.data.qrtext)
     drawQrcode({
       width: 200,
       height: 200,
@@ -58,11 +47,37 @@ Page({
     })
   },
 
+  // 关闭二维码界面
+  onClose:function(){
+    this.setData({
+      show: false
+    })
+  },
+
+  onTaptoHelp:function(){
+    wx.navigateTo({
+      url: '/pages/help/help',
+    })
+  },
+
+  onLoad: function (options) {
+    var PWD = wx.getStorageSync('PWD')
+    console.log('PWD in Storage: '+PWD)
+    //console.log('codes: ' + this.data.codes)
+    this.setData({
+      PWD: PWD,
+      //qrtext: 'test'
+    })
+    console.log('PWD was setted: '+this.data.PWD)
+    //console.log('qrtext was setted: '+this.data.qrtext)
+  },
+
   onReady: function () {},
 
   // 每次切换到此页面时执行
   onShow: function () {
     this.loadAccounts()  // 读取本地缓存
+    console.log('current code: ' + this.data.codes)
   },
 
   // 每次离开此页面时执行
