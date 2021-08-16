@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "list": [
+    {
+        "pagePath": "pages/home/home"
+    },
+    {
+        "pagePath": "pages/lock/lock"
+    },
+    {
+        "pagePath":  "pages/setting/setting"
+    }
+]
+}

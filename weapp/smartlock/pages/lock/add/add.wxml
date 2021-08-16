@@ -1,0 +1,29 @@
+<view>
+  <van-cell-group title="账户名称">
+    <van-field
+      model:value="{{ value }}"
+      placeholder="默认使用签发者名称" 
+      label="账户名称"
+      focus
+      maxlength="30"
+      border="{{ false }}"
+    />
+  </van-cell-group>
+  <van-cell-group title="账户信息（不可更改）">
+    <van-field
+      label="密钥"
+      placeholder="{{accountToAdd.secret}}"
+      border="{{ false }}"
+      readonly
+    />
+    <van-field
+      label="签发者"
+      placeholder="{{accountToAdd.issuer}}"
+      border="{{ false }}"
+      readonly
+    />
+  </van-cell-group>
+  <view class="add-button">
+    <van-button type="info" round bind:click="onAdd">添加</van-button>
+  </view>
+</view>

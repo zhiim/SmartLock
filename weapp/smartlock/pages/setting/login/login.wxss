@@ -1,0 +1,42 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-container{
+  margin-top: 100rpx;
+}
+.title{
+  font-size: xx-large;
+  font-weight: 600;
+  color: #1989FA;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50rpx;
+}
+.info-line1{
+  font-size: large;
+}
+.info-line2{
+  margin-top: 20rpx;
+}
+
+.login-button{
+  margin-top: 100rpx;
+}
+button{
+  background-color: #1989FA;
+  color: #FFFFFE;
+  border-radius: 40rpx;
+  font-weight: lighter;
+}
+
+.image-container{
+  position: fixed;
+  bottom: 0;
+}

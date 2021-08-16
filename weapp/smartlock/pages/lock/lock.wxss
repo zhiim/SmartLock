@@ -1,0 +1,61 @@
+.delete{
+  width: 150rpx;
+  height: 105rpx;
+  background-color: #EE0A24;
+  color:white;
+}
+
+.delete-text{
+  display: flex;
+  margin-left: 30rpx;
+  padding-top: 25rpx;
+}
+
+
+.ShowCode{
+  height: 200px;
+  width: 200px;
+  margin-top: 50rpx; 
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+}
+
+.qrtitle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 100rpx;
+  margin-top: 70rpx;
+}
+.qrtitle .triangle{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 17.32px 10px 0 10px;
+  border-color: #1989FA transparent transparent transparent;
+}
+.qrtitle text{
+  font-weight: bold;
+  font-size: 40rpx;
+  margin-left: 10rpx;
+  color: #1989FA;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 100rpx;
+  margin-bottom: 60rpx;
+  margin-top: 40rpx;
+}
+.info-line1{
+  font-weight: 700;
+  font-size: x-large;
+}
+.info-line2{
+  font-weight: 600;
+  margin-top: 15rpx;
+}
+.info-line3{
+  margin-top: 30rpx;
+}

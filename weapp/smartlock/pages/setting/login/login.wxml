@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="title-container">
+    <text class="title">登录</text>
+  </view>
+  <view class="info-container">
+    <text class="info-line1">请微信授权登录</text>
+    <text class="info-line2">第一次登录即为注册</text>
+  </view>
+  <view class="login-button">
+    <!--触发onLogin函数-->
+    <button open-type="getUserInfo" catchtap="onLogin">授权登录</button>
+  </view>
+  <view class="image-container">
+    <van-image src="/images/login.png" width="750rpx" height="583rpx" fit="contain"></van-image>
+  </view>
+</view>

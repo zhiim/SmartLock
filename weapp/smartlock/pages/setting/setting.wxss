@@ -1,0 +1,38 @@
+/* pages/setting/setting.wxss */
+.info-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-avatar{
+  margin: 0 30rpx;
+  width: 130rpx;
+  height: 130rpx;
+  position: relative;
+}
+.user-avatar image{
+  vertical-align: top;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    border-radius: 2rpx;
+}
+.name-location{
+  margin-right: 30rpx;
+  flex-direction: column;
+  padding-top: 10rpx;
+}
+
+
+
+.popup-warn{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100rpx;
+  padding-right: 130rpx;
+  color: black;
+}

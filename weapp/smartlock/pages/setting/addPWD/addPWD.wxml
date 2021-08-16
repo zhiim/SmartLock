@@ -1,0 +1,25 @@
+<!--pages/setting/addPWD/addPWD.wxml-->
+<!--图片块-->
+<view class="decoration">
+  <van-image width="750rpx" height="500rpx" fit="contain" src="/images/addpwd2.png" class="image"/>
+  <view class="edge"></view>
+</view>
+<!--提示文字-->
+<view>
+  <van-cell>
+    <view class="add-section">
+      <text class="line1">添加固定密码</text>
+      <text class="line2">请在下方输入</text>
+    </view>
+  </van-cell>
+</view>
+<!--输入框-->
+<view>
+  <van-field value="{{ PWD }}" bind:change="onChange" clearable label="密码" placeholder="请输入密码"></van-field>
+</view>
+<!--提交按钮-->
+<view class="finish">
+  <text>完成</text>
+  <van-button round type="info" icon="arrow" bind:click="onaddPWD"></van-button>
+</view>
+

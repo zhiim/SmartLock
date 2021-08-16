@@ -1,0 +1,2 @@
+<!--pages/home/home.wxml-->
+<van-button type="info" round bind:click="onLocktest">开锁测试</van-button>

@@ -1,0 +1,42 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/setting/addPWD/addPWD",
+          "pathName": "pages/setting/addPWD/addPWD",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/setting/setting",
+          "pathName": "pages/setting/setting",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/lock/lock",
+          "pathName": "pages/lock/lock",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/setting/login/login",
+          "pathName": "pages/setting/login/login",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
