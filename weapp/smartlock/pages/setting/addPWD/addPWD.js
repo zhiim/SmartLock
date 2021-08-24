@@ -20,10 +20,12 @@ Page({
     let PWD = this.data.PWD;
     wx.setStorageSync('PWD', PWD);  //PWD写入缓存
     // PWD传送到服务器
+    var nickName = wx.getStorageSync('nickName');
     wx.request({
       url: "https://lcokrasp.xyz/smartlock/addPWD.php",
       data: {
-        PWD: PWD
+        PWD: PWD,
+        nickName: nickName // 暂时使用nickName来区分用户, 后期优化在换成openid
       },
       success:function(res){
         console.log(res.data);

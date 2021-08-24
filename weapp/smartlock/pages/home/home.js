@@ -27,6 +27,15 @@ Page({
     })
   },
 
+  onPWDtest: function(){
+    wx.request({
+      url: "https://lcokrasp.xyz/smartlock/bind/getPWD.php",
+      success: function(res){
+        console.log(res.data)
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
